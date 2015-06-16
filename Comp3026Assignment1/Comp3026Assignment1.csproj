@@ -177,6 +177,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\Archtop.jpg" />
+    <Content Include="images\Designer.jpg" />
+    <Content Include="images\ES.jpg" />
+    <Content Include="images\Explorer.jpg" />
+    <Content Include="images\Firebird.jpg" />
+    <Content Include="images\Flying V.jpg" />
+    <Content Include="images\Les Paul.jpg" />
+    <Content Include="images\SG.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
