@@ -13,5 +13,10 @@ namespace Comp3026Assignment1.Controllers
         {
             return View();
         }
+
+       /* public ActionResult Add(int, int)
+        {
+            Response.Redirect("");
+        }*/
     }
 }
