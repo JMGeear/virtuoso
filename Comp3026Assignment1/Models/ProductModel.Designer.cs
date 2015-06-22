@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Jeff\Documents\GitHub\Comp3026Assignment1\Comp3026Assignment1\Models\ProductModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Developer\Apps\virtuoso\Comp3026Assignment1\Models\ProductModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
