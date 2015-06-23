@@ -33,10 +33,10 @@ namespace Comp3026Assignment1.Migrations
             context.Users.AddOrUpdate(
                 p => p.Email,
                 new ApplicationUser {
-                    UserName = "storeOwner@comp3026.com",
+                    UserName = MvcApplication.OWNER,
                     PasswordHash = "AJlXAxvb4e7rytqD+VHlFaMUUZb5NgMC5ENhB0dzrix2gnFEmBDpQLCi0mFZbh3rig==",
                     SecurityStamp = "5b2913d4-7d1d-4a3a-b8d5-769c732d68ea",
-                    Email = "storeOwner@comp3026.com"
+                    Email = MvcApplication.OWNER
                 }
             );
         }

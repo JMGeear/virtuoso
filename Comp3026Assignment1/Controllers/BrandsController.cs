@@ -10,8 +10,6 @@ using Comp3026Assignment1.Models;
 
 namespace Comp3026Assignment1.Controllers
 {
-    // Restrict the Brands controller to only the store owner
-    [Authorize(Users = "storeOwner@comp3026.com")]
     public class BrandsController : Controller
     {
         private virtuosoBrands db = new virtuosoBrands();
@@ -38,6 +36,8 @@ namespace Comp3026Assignment1.Controllers
         }
 
         // GET: Brands/Create
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         public ActionResult Create()
         {
             return View();
@@ -46,6 +46,8 @@ namespace Comp3026Assignment1.Controllers
         // POST: Brands/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "BrandID,Name")] Brand brand)
@@ -61,6 +63,8 @@ namespace Comp3026Assignment1.Controllers
         }
 
         // GET: Brands/Edit/5
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +82,8 @@ namespace Comp3026Assignment1.Controllers
         // POST: Brands/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "BrandID,Name")] Brand brand)
@@ -92,6 +98,8 @@ namespace Comp3026Assignment1.Controllers
         }
 
         // GET: Brands/Delete/5
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,6 +115,8 @@ namespace Comp3026Assignment1.Controllers
         }
 
         // POST: Brands/Delete/5
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
