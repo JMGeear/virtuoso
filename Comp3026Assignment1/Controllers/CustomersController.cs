@@ -10,6 +10,7 @@ using Comp3026Assignment1.Models;
 
 namespace Comp3026Assignment1.Controllers
 {
+    [Authorize]
     public class CustomersController : Controller
     {
         private virtuosoContact db = new virtuosoContact();

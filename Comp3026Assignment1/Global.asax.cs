@@ -12,6 +12,8 @@ namespace Comp3026Assignment1
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public const string OWNER = "storeOwner@comp3026.com";
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

@@ -10,6 +10,8 @@ using Comp3026Assignment1.Models;
 
 namespace Comp3026Assignment1.Controllers
 {
+    // Restrict the Orders controller to any logged-in user
+    [Authorize]
     public class OrdersController : Controller
     {
         private virtuosoOrders db = new virtuosoOrders();

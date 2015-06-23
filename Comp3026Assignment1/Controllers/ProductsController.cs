@@ -36,6 +36,9 @@ namespace Comp3026Assignment1.Controllers
         }
 
         // GET: Products/Create
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
+        
         public ActionResult Create()
         {
             return View();
@@ -43,7 +46,9 @@ namespace Comp3026Assignment1.Controllers
 
         // POST: Products/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598..
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ProductID,Name,Price,BrandID")] Product product)
@@ -59,6 +64,8 @@ namespace Comp3026Assignment1.Controllers
         }
 
         // GET: Products/Edit/5
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,6 +83,8 @@ namespace Comp3026Assignment1.Controllers
         // POST: Products/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ProductID,Name,Price,BrandID")] Product product)
@@ -90,6 +99,8 @@ namespace Comp3026Assignment1.Controllers
         }
 
         // GET: Products/Delete/5
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,6 +116,8 @@ namespace Comp3026Assignment1.Controllers
         }
 
         // POST: Products/Delete/5
+        // Restrict to only the store owner
+        [Authorize(Users = MvcApplication.OWNER)]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
