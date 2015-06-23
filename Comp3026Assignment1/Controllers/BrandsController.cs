@@ -10,6 +10,8 @@ using Comp3026Assignment1.Models;
 
 namespace Comp3026Assignment1.Controllers
 {
+    // Restrict the Brands controller to only the store owner
+    [Authorize(Users = "storeOwner@comp3026.com")]
     public class BrandsController : Controller
     {
         private virtuosoBrands db = new virtuosoBrands();

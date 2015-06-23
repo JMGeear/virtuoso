@@ -10,6 +10,8 @@ using Comp3026Assignment1.Models;
 
 namespace Comp3026Assignment1.Controllers
 {
+    // Restrict the Products controller to only the store owner
+    [Authorize(Users = "storeOwner@comp3026.com")]
     public class ProductsController : Controller
     {
         private virtuosoProducts db = new virtuosoProducts();

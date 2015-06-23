@@ -13,7 +13,7 @@ namespace Comp3026Assignment1.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201506230244490_storeOwner"; }
+            get { return "201506230257289_storeOwner"; }
         }
         
         string IMigrationMetadata.Source
