@@ -12,16 +12,12 @@ namespace Comp3026Assignment1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Brand
+    public partial class AspNetUserLogin
     {
-        public Brand()
-        {
-            this.Products = new HashSet<Product>();
-        }
+        public string LoginProvider { get; set; }
+        public string ProviderKey { get; set; }
+        public string UserId { get; set; }
     
-        public int BrandID { get; set; }
-        public string Name { get; set; }
-    
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

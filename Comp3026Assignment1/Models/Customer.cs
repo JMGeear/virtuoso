@@ -14,10 +14,17 @@ namespace Comp3026Assignment1.Models
     
     public partial class Customer
     {
+        public Customer()
+        {
+            this.Orders = new HashSet<Order>();
+        }
+    
         public int CustomerID { get; set; }
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
         public byte[] Password { get; set; }
         public System.DateTime PurchaceDate { get; set; }
+    
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

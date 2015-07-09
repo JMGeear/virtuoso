@@ -265,6 +265,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\Archtop.jpg" />
+    <Content Include="images\background.jpg" />
     <Content Include="images\Designer.jpg" />
     <Content Include="images\ES.jpg" />
     <Content Include="images\Explorer.jpg" />
