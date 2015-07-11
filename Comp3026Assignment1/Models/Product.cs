@@ -18,5 +18,6 @@ namespace Comp3026Assignment1.Models
         public string Name { get; set; }
         public decimal Price { get; set; }
         public int BrandID { get; set; }
+        public string images { get; set; }
     }
 }
