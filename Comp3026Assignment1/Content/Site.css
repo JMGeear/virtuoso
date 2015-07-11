@@ -42,3 +42,7 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.well {
+    color:black;
+}
